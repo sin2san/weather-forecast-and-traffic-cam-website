@@ -1,0 +1,14 @@
+.navbar{
+    text-align: center;
+}
+
+.navbar span{
+    padding: 15px 0;
+    width: 100%;
+}
+
+.bg-dark{
+    background-color: #222 !important;
+    vertical-align: middle;
+    box-shadow: 0 0 3px #aaa;
+}

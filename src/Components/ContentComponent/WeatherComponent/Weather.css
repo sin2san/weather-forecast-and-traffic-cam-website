@@ -1,0 +1,31 @@
+.card{
+    background-color: #ffffff;
+    color: #505050;
+    height: 240px;
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 0 2px #aaa;
+    font-weight: 100;
+}
+
+.weather-icon{
+    font-size: 80px;
+}
+
+.weather-icon i{
+    vertical-align: middle;
+    color: orange;
+}
+
+.temperature{
+    font-size: 70px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+img{
+    width: 100%;
+}
+
+/*CHECK*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
