@@ -2,22 +2,22 @@ import React, { Component } from 'react';
 import Auxiliary from '../../../hoc/Auxiliary/Auxiliary';
 import './Location.css';
 
-class Location extends Component{
-    render(){
+class Location extends Component{   
+
+    render() {
+
+        let datas =this.props.locations
+         .map(loc => {
+             return <li onClick={() => this.props.onLocationClick(loc)}>{loc.name}</li> 
+         }
+             
+         );
+        
         return(
             <Auxiliary>
-                <div className="location-outer mb-4">
+                <div className="location-outer">
                     <ul className="location-list">
-                        <li><a href="">Kembangan</a></li>   
-                        <li><a href="">Bedok</a></li>   
-                        <li><a href="">Ang Mo Kio</a></li>   
-                        <li><a href="">Bishan</a></li>
-                        <li><a href="">Rocher</a></li>   
-                        <li><a href="">Sembawang</a></li>
-                        <li><a href="">Rocher</a></li>   
-                        <li><a href="">Sembawang</a></li>
-                        <li><a href="">Rocher</a></li>   
-                        <li><a href="">Sembawang</a></li>
+                        {datas}      
                     </ul> 
                 </div>
             </Auxiliary>

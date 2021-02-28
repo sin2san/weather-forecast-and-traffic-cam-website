@@ -1,0 +1,6 @@
+{
+    "baseURL" : "https://api.data.gov.sg",
+    "version" : "v1",
+    "transport" : "transport",
+    "environment" : "environment"
+}

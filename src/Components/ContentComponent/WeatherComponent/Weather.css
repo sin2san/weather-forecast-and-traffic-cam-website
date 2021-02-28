@@ -1,11 +1,11 @@
 .card{
     background-color: #ffffff;
-    color: #505050;
-    height: 240px;
+    color: #303030;
+    height: 100%;
     border-radius: 0;
     border: none;
     box-shadow: 0 0 2px #aaa;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 .weather-icon{
@@ -25,6 +25,21 @@
 
 img{
     width: 100%;
+}
+
+.desc{
+    bottom: 0;
+    background-color: orange;
+    padding: 20px 0;
+}
+
+.desc span{
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0 10px;
+}
+
+.desc span:last-child{
+    border: none;
 }
 
 /*CHECK*/

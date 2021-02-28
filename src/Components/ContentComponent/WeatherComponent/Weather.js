@@ -20,14 +20,14 @@ class Weather extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="row">
-<div className="col-md-12">
-                        <div className="description">
-                                    <div className="weatherCondition">Mostly Cloudy</div>
-                                    <div className="wind">Wind: 3mph</div>
-                                    <div className="humidity">Humidity: 10mph</div>
-                                </div>
-                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="desc text-center">
+                                <span>{this.props.location == null ? '' : this.props.location.name}</span>
+                                <span>Wind: 3mph</span>
+                                <span>Humidity: 10mph</span>
+                            </div>
                         </div>
                     </div>
                 </div>

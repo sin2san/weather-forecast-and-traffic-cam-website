@@ -1,13 +1,6 @@
-"use strict";
-import React from 'react';
+import React, { Component } from 'react';
 
-class Date extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            date : "2021-02-28T08:00"
-        };
-    }
+class MyDate extends Component {
 
     render() {
         return (
@@ -15,19 +8,20 @@ class Date extends React.Component {
                 className="form-control" 
                 type="datetime-local" 
                 ref={(date) => {this.dateRef = date;}} 
-                value={this.state.date} 
-                onChange={this._onDateChange.bind(this)}
+                value={this.props.value} 
+                onChange={this._onDateChange.bind(this)}                
             />
         );
     }
 
     _onDateChange(e) {
-        let state = this.state;
-        state['date'] = e.target.value;
-        state['date'] = this.dateRef.value;
-        this.setState(state);
+        let date;
+        // date = e.target.value;
+        date = this.dateRef.value;
+        console.log('my date' + date);
+        this.props.updateDate(date+':00');        
     }
 
 }
 
-export default Date;
+export default MyDate;
