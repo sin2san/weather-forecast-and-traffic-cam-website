@@ -6,9 +6,9 @@ class Location extends Component{
 
     render() {
 
-        let datas =this.props.locations
+        let locations =this.props.locations
          .map(loc => {
-             return <li onClick={() => this.props.onLocationClick(loc)}>{loc.name}</li> 
+             return <li onClick={() => this.props.onLocationClick(loc)} key={loc.name}>{loc.name}</li> 
          }
              
          );
@@ -17,7 +17,7 @@ class Location extends Component{
             <Auxiliary>
                 <div className="location-outer">
                     <ul className="location-list">
-                        {datas}      
+                        {locations}      
                     </ul> 
                 </div>
             </Auxiliary>

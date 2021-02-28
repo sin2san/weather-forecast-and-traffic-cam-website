@@ -9,14 +9,9 @@ class Weather extends Component {
                 <div className="card">
                     <div className="card-body">
                         <div className="row text-center">
-                            <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div className="weather-icon">
-                                    <i className="wi wi-day-cloudy"></i>
-                                </div>
-                            </div>
-                            <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                <div className="temperature">
-                                    <span>25&deg;</span>
+                                    <i className="wi wi-night-clear"></i>
                                 </div>
                             </div>
                         </div>
@@ -24,9 +19,8 @@ class Weather extends Component {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="desc text-center">
+                                <span>{this.props.location == null ? '' : this.props.location.forecast}</span>
                                 <span>{this.props.location == null ? '' : this.props.location.name}</span>
-                                <span>Wind: 3mph</span>
-                                <span>Humidity: 10mph</span>
                             </div>
                         </div>
                     </div>

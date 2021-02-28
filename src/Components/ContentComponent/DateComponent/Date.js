@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class MyDate extends Component {
+class CustomDate extends Component {
 
     render() {
         return (
@@ -16,7 +16,6 @@ class MyDate extends Component {
 
     _onDateChange(e) {
         let date;
-        // date = e.target.value;
         date = this.dateRef.value;
         console.log('my date' + date);
         this.props.updateDate(date+':00');        
@@ -24,4 +23,4 @@ class MyDate extends Component {
 
 }
 
-export default MyDate;
+export default CustomDate;

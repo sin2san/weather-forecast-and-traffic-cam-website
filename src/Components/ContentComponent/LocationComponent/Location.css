@@ -24,13 +24,14 @@
     border-bottom: none;
 }
 
-.location-outer .location-list li a {
+.location-outer .location-list li {
     color: #505050;
     font-weight: 100;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.location-outer .location-list li a:hover {
+.location-outer .location-list li:hover {
     color: #303030;
     font-weight: 400;
 }

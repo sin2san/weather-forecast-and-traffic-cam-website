@@ -3,7 +3,7 @@ import axios from 'axios';
 import Auxiliary from '../../hoc/Auxiliary/Auxiliary';
 import configData from '../../config.json';
 
-import MyDate from './DateComponent/Date';
+import CustomDate from './DateComponent/Date';
 import Location from './LocationComponent/Location';
 import Weather from './WeatherComponent/Weather';
 import Traffic from './TrafficComponent/Traffic';
@@ -17,7 +17,7 @@ class Content extends Component {
         time: "",
         locations: [],
         cameras: [],
-        selectedLocaltion: null
+        selectedLocation: null
     }
 
     componentDidMount() {
@@ -25,7 +25,7 @@ class Content extends Component {
     }
 
     updateDate = (input) => {
-        this.setState({ date: input, selectedLocaltion: null });
+        this.setState({ date: input, selectedLocation: null });
         this.loadData();
     }
 
@@ -46,8 +46,6 @@ class Content extends Component {
             .then(
                 response => {
                     this.buildStateObject(response);
-
-
                 }
             );
     }
@@ -56,13 +54,12 @@ class Content extends Component {
         let results = [];
         response.data.items.forEach(item => {
             if (Object.keys(item).length > 0) {
-                console.log(item);
                 item.forecasts.forEach(forecast => {
                     response.data.area_metadata.forEach(meta => {
                         this.mapNameAndLocation(results, meta, forecast);
 
                     });
-                    this.checkResultAndStatus(results, response);
+                    this.setState({ locations: results });
                 });
             } else {
                 this.setState({ locations: [] });
@@ -93,17 +90,8 @@ class Content extends Component {
         });
     }
 
-    checkResultAndStatus = (results, response) => {
-        if (!results && response.status === 200) {
-            this.setState({ locations: null });
-        } else {
-            this.setState({ locations: results });
-        }
-    }
-
     onLocationClick = (location) => {
-        this.setState({ selectedLocaltion: location });
-        console.log(location);
+        this.setState({ selectedLocation: location });
     }
 
     render() {
@@ -113,7 +101,7 @@ class Content extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-4">
-                                <MyDate
+                                <CustomDate
                                     value={this.state.date}
                                     updateDate={this.updateDate} />
                             </div>
@@ -126,13 +114,13 @@ class Content extends Component {
                             </div>
                             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 mb-4">
                                 <Weather
-                                    location={this.state.selectedLocaltion} />
+                                    location={this.state.selectedLocation} />
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 mx-auto">
                                 <Traffic
-                                    location={this.state.selectedLocaltion} />
+                                    location={this.state.selectedLocation} />
                             </div>
                         </div>
                     </div>
