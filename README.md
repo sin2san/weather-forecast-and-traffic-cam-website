@@ -1,8 +1,8 @@
 # Installation
 Copy or clone the repository to your local machine.\
 In the project directory, you can run:
-## `npm install`
-## `npm run`
+### `npm install`
+### `npm run`
 
 # Running
 1.Open http://localhost:3000 to view it in the browser.\
