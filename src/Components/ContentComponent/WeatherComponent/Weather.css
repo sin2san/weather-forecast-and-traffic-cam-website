@@ -1,4 +1,4 @@
-.card{
+.card {
     background-color: #000;
     color: #303030;
     height: 100%;
@@ -8,39 +8,85 @@
     font-weight: 400;
 }
 
-.weather-icon{
+.weather-icon {
     font-size: 80px;
 }
 
-.weather-icon i{
+.weather-icon i {
     vertical-align: middle;
+}
+
+.weather-icon .wi-night-clear {
     color: #ffffff;
 }
 
-.temperature{
+.weather-icon .wi-day-sunny {
+    color: #f9d71c;
+}
+
+.weather-icon .wi-cloudy-windy {
+    color: sandybrown;
+}
+
+.weather-icon .wi-day-cloudy {
+    color: #3498db;
+}
+
+.weather-icon .wi-day-sunny-overcast {
+    color: orange;
+}
+
+.temperature {
     font-size: 70px;
     font-weight: 600;
     vertical-align: middle;
 }
 
-img{
+img {
     width: 100%;
 }
 
-.desc{
+#desc {
     bottom: 0;
-    background-color: orange;
     padding: 20px 0;
 }
 
-.desc span{
+.desc-day {
+    background-color: #f9d71c;
+}
+
+.desc-night {
+    background-color: skyblue;
+}
+
+.desc-windy {
+    background-color: sandybrown;
+}
+
+.desc-day-cloudy {
+    background-color: #3498db;
+}
+
+.desc-fair-warm {
+    background-color: orange;
+}
+
+#desc span {
     border-right: 1px solid rgba(0, 0, 0, 0.2);
     padding: 0 10px;
 }
 
-.desc span:last-child{
+#desc span:last-child {
     border: none;
 }
 
-/*CHECK*/
+.weather-not-found {
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/*Weather Icons*/
+
 @import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
