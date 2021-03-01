@@ -13,7 +13,7 @@ import './Content.css';
 class Content extends Component {
 
     state = {
-        date: "2021-02-28T00:00:00",
+        date: "2021-02-28T12:00:00",
         time: "",
         locations: [],
         cameras: [],
