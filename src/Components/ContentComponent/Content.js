@@ -86,6 +86,9 @@ class Content extends Component {
                 if (camera.location.latitude.toString().includes(location.location.latitude)) {
                     location.location.image = camera.image;
                 }
+                if (camera.location.longitude.toString().includes(location.location.longitude)) {
+                    location.location.image = camera.image;
+                }
             });
         });
     }
